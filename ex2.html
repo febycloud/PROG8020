@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+    </head>
+
+    <body>
+        <p>
+        the sum is: <span id="result"></span> 
+        </p>
+        <button onclick="changeColor('blue');">blue</button>
+        <button onclick="changeColor('red');">red</button>
+        <script>
+                var x=prompt('enter 1st num');//first variable
+                x=parseInt(x);//convert to numbers
+    
+                var y=prompt('enter 2nd num');//secont variable
+                y=parseInt(y);
+    
+                var z=Number(prompt('enter 3rd num'));// 3rd variable to number
+
+                var w=x+y+z;//adding variavles and assigning to the third
+                document.getElementById('result').innerHTML=w;
+                document.write(w);
+                alert(w);//display the sum
+                function changeColor(newColor) {
+    var elem = document.getElementById('result');
+    elem.style.color = newColor;
+  }
+        </script>
+    
+    </body>
+</html>
