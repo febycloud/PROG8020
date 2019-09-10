@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex5</title>
+</head>
+<body>
+   <!-- <p id="writeHere">Here for writting</p>
+    <script>
+        var s =document.getElementById('writeHere');
+        s.innerHTML="Hi";  
+    </script>
+    <p id="result"></p> -->
+    <script>
+        // var FirstNum=prompt('enter first num');
+        // while(isNaN(FirstNum)|| FirstNum=''){
+        //     alert('not a number');
+        // }
+        // FirstNum=parseInt(FirstNum);
+        // document.write(FirstNum);
+        var num=prompt('enter first num');
+        var reg=/^[0-9]/;
+        if(reg.test(num)){
+            alert('good');
+        }else{
+            alert('NG');
+        }
+
+    </script>
+    
+</body>
+</html>
