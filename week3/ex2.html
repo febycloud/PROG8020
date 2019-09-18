@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return process();" action="" method="POST">
+        <input  type="text" id="userEmail" name="userEmail"><br>
+        <input  type="text" id="Name" name="Name"><br>
+        <input  type="text" id="Phone" name="Phone"><br>
+        <input  type="text" id="Adress" name="Adress"><br>
+        <br>
+        <input type="submit" value="Subscribe" > 
+        <!-- submit 追加内容到地址栏 浏览器用GET请求来获取一个html页面/图片/css/js等资源；用POST来提交一个<form>表单，并得到一个结果的网页。GET产生一个TCP数据包；POST产生两个TCP数据包。-->
+    </form>
+    <p id="error"></p>
+    <p id="result"></p>
+    <script>
+        function process(){
+            var userEmail=document.getElementById('userEmail').value;
+            if(userEmail.trim()===""){
+                document.getElementById('error').innerHTML=('input a email');
+                return false;
+        }else{
+            return true;
+        }
+        }
+    </script>
+</body>
+</html>

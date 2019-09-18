@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" class="buttonStyle" onclick="showme()">OKAY</button>
+    <script>
+        function showme(){
+        var a=confirm('are u ok');
+        if(a){
+        document.write('Hello');}
+        else{document.write('Thank you');}
+        }
+        function changecolor(){
+           document.getElementById("btn").style.backgroundColor="red";
+        }
+    </script>
+    <style>
+    btn{ size: 40px;
+        color: aqua;
+        font-family: fantasy;
+    }
+    .buttonStyle:hover{
+        background: red;
+        transition-duration: 0.4s;
+    }
+    </style>
+</body>
+</html>

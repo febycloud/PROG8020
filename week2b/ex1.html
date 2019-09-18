@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>w2b</title>
+</head>
+<body>
+    <style>
+        table{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 5px black;
+        }
+    </style>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mark</th>
+        </tr>
+    </thead>```
+    <tbody id="data">
+    </tbody>
+    </table>
+    <script>
+        output='';
+        counter=1;
+        while(counter != 3){
+            output += `<tr>
+                        <td> Joni</td>
+                        <td> xxooddaa@mail.com---${counter}</td>
+                        <td> 99</td>
+                        </tr>`;
+                        counter++;
+        }
+        document.getElementById('data').innerHTML=output;
+    </script>
+</body>
+</html>

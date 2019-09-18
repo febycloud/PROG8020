@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W3A Ex3</title>
+</head>
+<body>
+    <form onsubmit="return processForm();" action="" method="POST" >
+        Name: <input type="text" id="userName" name="userName">
+        <br><br>
+        Email: <input type="text" id="userEmail" name="userEmail">
+        <br><br>
+        Phone: <input type="text" id="userPhone" name="userPhone">
+        <br><br>
+        Address: <input type="text" id="userAddress" name="userAddress">
+        <br><br>
+        <input type="submit" value="Subscribe!" >
+    </form>
+    <p id="errors" hidden>Enter a</p>
+    <p id="result"></p>
+
+    <script>
+        function processForm(){
+            //alert('form submitted');
+            //document.getElementById("errors").style.display=show;
+            document.getElementById('errors').hidden=false;
+            var userName = document.getElementById('userName').value;
+            if(userName.trim() === ''){
+                document.getElementById('errors').innerHTML +=' Name';
+            }
+            var userEmail = document.getElementById('userEmail').value;
+            if(userEmail.trim() === ''){
+                document.getElementById('errors').innerHTML +=' email';
+            }
+            var userPhone = document.getElementById('userPhone').value;
+            if(userPhone.trim() === ''){
+                document.getElementById('errors').innerHTML +=' Phone';
+            }
+            var userAddress = document.getElementById('userAddress').value;
+            if(userAddress.trim() === ''){
+                document.getElementById('errors').innerHTML +=' Address';
+            }
+            //alert(userEmail);
+            return false; //stops the form from submitting
+        }
+    </script>
+
+</body>
+</html>
