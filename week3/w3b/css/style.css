@@ -1,0 +1,8 @@
+body{
+    width: 220px;
+    border: 2px solid #3c3c3c;
+    box-shadow: 0 0 10px #333;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}

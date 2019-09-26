@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/form.js"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <title>W3A Ex3</title>
+</head>
+
+<body>
+    <form onsubmit="return processForm();" action="" method="POST" >
+        Tickets: <input type="text" id="tickets" name="tickets"> <br><br>
+        Name: <input type="text" id="userName" name="userName" placeholder="Your Name">
+        <br><br>
+        Email: <input type="text" id="userEmail" name="userEmail" value="@conestogac.on.ca">
+        <br><br>
+        Phone: <input type="text" id="userPhone" name="userPhone">
+        <br><br>
+        Address: 
+        <textarea id="userAddress" name="userAddress">
+        </textarea>
+        <br><br>
+        <input type="submit" value="Subscribe!" >
+    </form>
+    <p id="errors"></p>
+    <p id="result"></p>
+</body>
+</html>
