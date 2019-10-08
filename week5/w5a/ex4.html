@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W5A ex4</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var names = ['John', 'Jane', 'Will', 'Tom', 'John Smith'];
+        var marks = [100, 98, 96, 99, 92];
+    </script>
+
+</head>
+<body>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+            
+            </tbody>
+        </table>
+    <script>
+        var arrLength = names.length;
+        var myOutput = '';
+        for(var i = 0; i<arrLength; i++){
+            myOutput += `
+                <tr>
+                    <td>${names[i]}</td>
+                    <td>${marks[i]}</td>
+                </tr>
+            `;
+        }
+        document.getElementById('result').innerHTML = myOutput;
+    </script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+        
+    </script>
+</body>
+</html>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="order.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>MY SHOP</title>
 </head>
 <body>
@@ -30,24 +32,38 @@
             <option value="Ontario">Ontario</option>
             <option value="Quebec">Quebec</option>
             <option value="Nunavut">Nunavut</option>
-        </select>
+        </select><br>
     
         <label>Phone</label>
-        <input id="phone" placeholder="123-123-1234" type="phone" name="phone"><br/>
+        <input id="phone" placeholder="123-123-1234" type="phone" name="phone"><br>
     
         <label>Post Code</label>
-        <input id="postcode" placeholder="X9X 9X9" type="postcode" name="postcode"><br/>
-
-        <label>Product 1</label>
-        <input id="product1" placeholder="product1" type="product1" name="product1"><br/>
-
-        <label>Product2</label>
-        <input id="product2" placeholder="product2" type="product2" name="product2"><br/>
-
-        <label>Product3</label>
-        <input id="product3" placeholder="product3" type="product3" name="product3"><br/>
+        <input id="postcode" placeholder="X9X 9X9" type="postcode" name="postcode"><br>
+        <br>
+        <div class="product" id="CHR">
+                <img src="img/item1.jpg" alt="item1" />
+                 <h2>CH-R</h2>
+                <p>Price: <em>$12990</em></p>
+            </div>
+        <div class="product" id="GTR">
+            <img src="img/item2.png" alt="item2" />
+             <h2>GTR</h2>
+            <p>Price: <em>$27890</em></p>
+        </div>
+        <div class="product" id="VIZIO">
+            <img src="img/item3.jpg" alt="item3" />
+             <h2>VIZIO</h2>
+            <p>Price: <em>$32950</em></p>
+        </div>
+        <br>
+        <input type="submit" value="Checkout">
+        <p id="errors"></p>
 
 
     </form>
+
+    <div class="formData">
+        <p id="formResult">No Orders Yet</p>
+      </div>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+<body>    
+     <table id='myTable'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>marks</th>
+            </tr>
+        </thead>
+        <tbody id='result'>
+            
+        </tbody>
+    </table>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+     <script>
+            var names=['lee','john','gal','dal'];
+            var score=[100,90,88,99];
+            var arrLength=names.length;
+            var outPut='';
+            for (var i=0;i<arrLength;i++){
+                outPut+=`
+                  <tr>
+                          <td>${names[i]}</td>
+                          <td>${score[i]}</td>
+                  </tr>`;
+                 document.getElementById('result').innerHTML=outPut;
+            }
+        $(document).ready( function () {
+        $('#myTable').DataTable();
+        } );
+    </script>
+
+   
+</body>
+</html>
