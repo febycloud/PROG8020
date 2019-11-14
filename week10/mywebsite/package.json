@@ -11,6 +11,10 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "express-validator": "*",
+    "express-session": "*",
+    "connect-flash": "*",
+    "express-messages": "*"
   }
 }
