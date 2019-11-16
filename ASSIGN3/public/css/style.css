@@ -23,10 +23,6 @@
     width: 270px;
     box-shadow: 2px 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  .product:active{
-    transform: scale(0.9);
-    box-shadow:0 2px 25px rgba(15, 224, 137, 0.568);
-  }
 .product img {
     margin: auto;
     width: 100%;
@@ -98,6 +94,3 @@ select{
   width: 70%;
   margin-left:60px;
 }
-dt { display:block; float:left; width:150px; text-align: right;}
-dt:after{content:':';}
-dd { display:block;}

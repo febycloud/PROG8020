@@ -14,16 +14,27 @@ myApp.set('view engine', 'ejs');
  myApp.get('/',function(req, res){
      res.render('index');
  });
-// myApp.get('/contact',function(req, res){
-//     res.render('contactform');
-// });
+ myApp.get('/contact',function(req, res){
+     res.render('contactform');
+ });
 myApp.post('/contact',[
     check('name','enter a name').not().isEmpty(),
-    check('email','enter a vail email').isEmail()
+    check('email','enter a vail email').isEmail(),
+    check('phone','enter a vail phone').isMobilePhone(),
+    check('qty').custom(value=>{
+        value=parseInt(value)
+        if(value<0){
+            throw new Error('value>0 needed')
+        }
+        return true;
+    })
 ],function(req, res){
     const errors=validationResult(req);
     if(!errors.isEmpty()){
-
+        var errorData={
+            errors:errors.array()
+        }
+        res.render('contactform',errorData)
     }else{
     var name=req.body.name;
     var phone=req.body.phone;
