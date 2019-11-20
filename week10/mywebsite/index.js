@@ -2,6 +2,17 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const {check,validationResult}=require('express-validator');
+const mongoose=require('mongoose');
+mongoose.connect('mongodb://localhost:27017/mywebsite',{
+    useNewUrlParser:true
+})
+
+const Contact=mongoose.model('contacts',{
+    name:String,
+    phone:String,
+    qty:String,
+    message:String
+});
 var myApp = express();
 
 myApp.use(bodyParser.urlencoded({extended:false}))
@@ -19,7 +30,6 @@ myApp.set('view engine', 'ejs');
  });
 myApp.post('/contact',[
     check('name','enter a name').not().isEmpty(),
-    check('email','enter a vail email').isEmail(),
     check('phone','enter a vail phone').isMobilePhone(),
     check('qty').custom(value=>{
         value=parseInt(value)
@@ -39,6 +49,14 @@ myApp.post('/contact',[
     var name=req.body.name;
     var phone=req.body.phone;
     var qty=req.body.qty;
+    var message=req.body.message;
+    var mycontact=new Contact({
+        name:name,
+        phone:phone,
+        qty:qty,
+        message:message
+    });
+    mycontact.save().then(()=>console.log('new contact made'));
     var pageData={
         name:name,
         phone:phone,

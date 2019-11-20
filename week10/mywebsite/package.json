@@ -10,11 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
-    "express": "*",
-    "ejs": "*",
-    "express-validator": "*",
-    "express-session": "*",
     "connect-flash": "*",
-    "express-messages": "*"
+    "ejs": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongoose": "^5.7.11"
   }
 }

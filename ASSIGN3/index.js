@@ -18,21 +18,28 @@ myApp.set('view engine', 'ejs');
     check('email','enter a vailed email').isEmail(),
     check('address','enter an vailed address').not().isEmpty(),
     check('phone','enter a vail phone').isMobilePhone(),
+    check('city','enter a vail city').not().isEmpty(),
+    check('address','enter a vail address').not().isEmpty(),
+    check('quantities','at least get choose a car').not().isEmpty(),
+
     check('postcode').custom(value=>{
         var postcodeRegex = /^[A-Z][0-9][A-Z]\s[0-9][A-Z][0-9]$/;
         if(!postcodeRegex.test(value)){
             throw new Error('postcode is not correct')
         }
-        
-        return true;
-    })
+        return true;}
+       )
+
+
 ],function(req, res){
     const errors=validationResult(req);
     if(!errors.isEmpty()){
         var errorData={
             errors:errors.array()
+        
         }
         res.render('index',errorData)
+       
     }else{
     var name=req.body.name;
     var phone=req.body.phone;
@@ -79,7 +86,6 @@ var total=price*((ptax+100)/100)*quantities+dayprice;
     res.render('result',pageData);
 }
 });
-
 myApp.listen(8080);
 
 console.log('Server started at 8080 for mywebsite...');
