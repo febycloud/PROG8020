@@ -24,9 +24,9 @@
             <input type="submit" class="corm-submit" value="Submit">
         </div>
         <div class="form-field">
-           message:</label>
-            <input type="text" class="form-input" name="message">
- <label for="message">
+           <label>message:</label>
+            <textarea type="text" class="form-input" id="message" name="message"></textarea>
+        </div>
         </div>
         </form>
         <%
@@ -41,5 +41,12 @@
         %>
     </section>
 </main>
+<script>
+ ClassicEditor
+    .create(document.querySelector('#message'))
+    .catch(error=>{
+        console.error(error);
+    });
+</script>
 
 <%- include('_layouts/footer')  -%>

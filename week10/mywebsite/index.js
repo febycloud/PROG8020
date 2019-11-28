@@ -60,7 +60,8 @@ myApp.post('/contact',[
     var pageData={
         name:name,
         phone:phone,
-        qty:qty
+        qty:qty,
+        message:message
     }
     res.render('contactthanks',pageData);
 }
