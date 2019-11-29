@@ -2,21 +2,27 @@
 <main>
     <section>
         <h1>Edit Contact</h1>
-        <form method="POST" action="/contact">
+        <form method="POST" action="/edit/<%= contact._id %>"
+            enctype="multipart/form-data">
             <div class="form-field">
                 <label for="name">Name:</label>
                 <input type="text" class="form-input" name="name" value="<%= contact.name %>">
-           </div>
+            </div>
             <div class="form-field">
                 <label for="phone">Phone:</label>
-                <input type="text" class="form-input" name="phone" value="<%= contact.phone %>"></div>
+                <input type="text" class="form-input" name="phone" value="<%= contact.phone %>">
+            </div>
             <div class="form-field">
                 <label for="qty">Quantity of apples:</label>
                 <input type="text" class="form-input" name="qty" value="<%= contact.qty %>">
-          </div>
+            </div>
             <div class="form-field">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" <%- contact.message %>></textarea>
+                <textarea id="message" name="message"><%- contact.message %></textarea>
+            </div>
+            <div class="form-field">
+                <label for="myimage">Gift Photo:</label>
+                <input type="file" class="form-input" name="myimage" id="myimage">
             </div>
             <div class="form-field">
                 <input type="submit" class="form-submit" value="Submit">

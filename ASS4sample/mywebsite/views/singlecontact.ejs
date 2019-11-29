@@ -1,11 +1,11 @@
 <%- include('_layouts/header') -%>
 <main>
     <section>
-        <h1>Contact Name: <%= Contact.name %></h1>
-        <h2>Phone: <%= Contact.phone %></h2>
-        <h2>Quantity of apples: <%= Contact.qty %></h2>
-        <h2>Message: <%= Contact.message %></h2>
-        <img src="/contact_images/<%=Contact.mypic %>">
+        <h1>Contact Name: <%= contact.name %> </h1>
+        <h2>Phone: <%= contact.phone %></h2>
+        <h2>Quantity of apples: <%= contact.qty %></h2>
+        <h2>Message: <%- contact.message %></h2>
+        <img src="/contact_images/<%= contact.myimage %>">
     </section>
 </main>
 <%- include('_layouts/footer') -%>

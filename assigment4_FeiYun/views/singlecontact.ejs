@@ -1,0 +1,10 @@
+<%- include('_layouts/header2') -%>
+<main>
+    <section>
+        <h1>Tag Name:<%= contact.tag %></h1>
+        <h1>Title: <%= contact.name %> </h1>
+        <h2>Content: <%- contact.message %></h2>
+        <img src="/contact_images/<%= contact.myimage %>">
+    </section>
+</main>
+<%- include('_layouts/footer') -%>

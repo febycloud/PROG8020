@@ -50,6 +50,10 @@ nav{
 .logo{
 	width: 90px;
 }
+
+img{
+	width: 300px;
+}
 footer{
 	font-size: 18px;
 	text-align: center;
