@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"fksys.admins"}],"uuid":"06dd3de2219e4665bae4217da5e0afb5"}

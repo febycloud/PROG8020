@@ -126,7 +126,7 @@ myApp.get('/logout',function(req, res){
     res.render('logout');
 });
 
-myApp.get('/allcontacts',function(req, res){
+myApp.get('/allco',function(req, res){
     if(req.session.userLoggedIn){
         Contact.find({}).exec(function(err, contacts){
             res.render('allcontacts', {contacts:contacts});
